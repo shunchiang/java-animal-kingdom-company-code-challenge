@@ -1,18 +1,22 @@
 package animals;
 
+import java.util.ArrayList;
 import java.util.List;
 
 abstract class AbstractAnimals {
     protected String name;
-    protected int id;
     protected int yearDiscovered;
     protected List<String> stomach;
+    protected int id;
+    private static int maxId = 0;
+    private static List<String> ate = new ArrayList<String>();
 
-    public AbstractAnimals(String name, int id, int year, List<String> stomach) {
+    public AbstractAnimals(String name, int year) {
+        maxId++;
         this.name = name;
-        this.id = id;
         this.yearDiscovered = year;
-        this.stomach = stomach;
+        this.stomach = ate;
+        this.id = maxId;
     }
 
     void eat(String food) {

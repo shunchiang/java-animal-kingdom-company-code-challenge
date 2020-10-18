@@ -1,11 +1,9 @@
 package animals;
 
-import java.util.List;
-
 public class Mammals extends AbstractAnimals {
 
-    public Mammals(String name, int id, int year, List<String> stomach) {
-        super(name, id, year, stomach);
+    public Mammals(String name, int year) {
+        super(name, year);
     }
 
     @Override
@@ -25,7 +23,8 @@ public class Mammals extends AbstractAnimals {
 
     @Override
     public String toString() {
-        return "Animal: " + name + " Movement: " + getMovement() + " reproduction method: " + getReproductionMethod()
+        return "ID :" + id + " Animal: " + name + " Movement: " + getMovement() + " Discovered: " + yearDiscovered
+                + " reproduction method: " + getReproductionMethod() + " breathing method: " + getBeathingMethod()
                 + " Ate: " + stomach;
     }
 
